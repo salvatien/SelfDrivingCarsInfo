@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset = 'utf-8'>
+<title> Autopilot </title>
+<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body  onload="drawCarsCanv()">
+
+<div id="divContainer">
+<nav class = "tab">
+  <button  id = "startButton" style = "background-color : green;" onclick="openStart(event)">Start</button>
+  <button  id = "googleButton" onclick="openGoogle(event)">Google Waymo</button>
+  <button id = "wadyButton" onclick="openwady(event)">Wady</button>
+
+</nav>
+<audio id="audio" src="media/bing.wav"></audio>
+<div id="start">
+<article>
+  <header>
+    <h1>Autonomiczne samochody</h1>
+    <h4>Czyli czy największą wadą pojazdów teraźniejszości są ich kierowcy?</h4>
+    <p>Na amerykańskich drogach na każde 1 800 000 przejechanych kilometrów przypada jedna śmiertelna ofiara wypadku samochodowego. W 2015 roku  94% wypadków sklasyfikowano jako powstałe z winy kierowcy, natomiast śmierć na drogach USA poniosło ponad 35 000 osób. Dlatego to właśnie w Stanach rozpoczęła się rewolucja, która już wkrótce może diametralnie zmienić sposób, w jaki patrzymy na samochody. </p>
+  </header>
+  <p>Porażające statystyki doprowadziły do prostych wniosków - jeśli sytuacja ma się poprawić, musimy poprawić umiejętności kierowców. Jednakże Ameryka cechuje się dość liberalnym podejściem do prowadzenia samochodu - przez duże dystanse dzielące poszczególne miejscowości, nawet nastolatkom pozwala się jeździć, a egzamin na prawo jazdy jest jednym z łatwiejszych na świecie. Zorganizowanie ogólnokrajowej akcji doszkalania kierowców byłoby nie tylko bardzo drogie i trudne logistycznie, ale przede wszystkim... No cóż, nikt nie lubi, gdy wmawia mu się, że "nie umie jeździć", co mogłoby spowodować niską frekwencję na takowych szkoleniach.</p>
+  <p>Dlatego też wiele firm związanych z branżą motoryzacyjną postanowiło opracować systemy, które będą pomagały kierowcom w ich codziennych zmaganiach. Jednym z największych pionierów jest Tesla, której Autopilot jest obecnie dopuszczony do ruchu ulicznego, jednakże z zastrzeżeniem, że kierowca cały czas powinien być skupiony na prowadzeniu i mieć ręce na kierownicy - dlatego choć jest to bardzo obiecująca technologia, warto skupić się na jednym z gigantów amerykańskiej sceny nowych technologii - na Alphabet, spółce - matce m.in. dla Google, która postanowiła szturmem wejść na rynek motoryzacyjny. Stworzyny został projekt obecnie znany pod nazwą Waymo, który w perspektywie czasu pozwoli na wyeliminowanie zagrożeń, spowodowanych przez błędy kierowców.</p>
+
+<p> Zalety sięgają jednak znacznie ponad to. Nie dość, że autopilot nigdy nie będzie rozproszony, odurzony czy niewyspany, to będzie mógł zaoszczędzić mnóstwo czasu - kiedy nie musimy prowadzić, możemy przecież skupić się na czymś innym, na przykład na pracy. Nie tracilibyśmy też czasu na szukanie parkingu, gdyż moglibyśmy wysiąść pod biurem, a samochód sam znalazłby miejsce parkingowe, zaparkował, po czym po wezwaniu ze smartfona odebrał nas spod biura. Mogłoby to pójść nawet o krok dalej - po co mieć własny samochód i ponosić koszty jego utrzymania, jeśli możemy takowy wynająć, i kiedy nie będziemy go już potrzebować, to sam podjedzie po następnego klienta? Dzięki temu, znacznie mniejsza łączna liczba samochodów zaspokoiłaby potrzeby transportowe, co zmniejszyłoby korki i rozładowało zatłoczone parkingi. Ruch mógłby być jeszcze płynniejszy, gdyby wszystkie samochody były autonomiczne - wtedy nie istniałaby konieczność przewidywania zachowań innych pojazdów, bo mogłyby się one komunikować między sobą, a światła na ulicach mogłyby inteligentnie kierować ruchem w zależności od warunków ruchu.  
+Ponadto, autonomiczne samochody w niebywałym stopniu ułatwią życie tych, którzy nie mogli dotychczas sami podróżować samochodem - ludzi niepełnosprawnych, starszych czy młodzieży. </p>
+
+<p> To rozwiązania mogą jednakże budzić pewne wątpliwości. Dowiedz się więcej o nich oraz o samym projekcie Waymo, korzystając z zakładek na górze strony.</p>
+
+</article>
+
+<canvas id ="wadyCanv" width= 1350 height= 320> </canvas>
+
+</div>
+
+
+
+<div id="google">
+
+<article>
+  <header>
+    <h2>Google Waymo</h2>
+    <h4>Czyli droga od zera do pioniera branży motoryzacyjnej. </h4>
+  </header>
+    <p>Uprzednio znane pod nazwą Self Driving Car Project, w 2016 roku stało się osobną marką. Teoretycznie należy ona do firmy - matki Google, czyli Alphabet, jednakże realnie to inżynierowie z Mountain View stoją za sukcesami tego projektu. W ciągu 8 lat rozwoju eksperymentowano z różnymi samochodami, m.in. Toyotą Prius czy Lexusem RX450h, jednak finalnie uznano, że najlepsze rezultaty zapewni zbudowanie własnego modelu - tak właśnie powstał prototyp, który następnie przerodził się w model Firefly. Był to miniaturowy pojazd, rozmiarem nie różniący się od klasycznego Malucha, jednakże oprócz wielkości punktów wspólnych było niewiele - Firefly nie posiadał kierownicy ani pedałów, mógł przewieźć tylko 2 osoby, i naszpikowany był całą masą elektroniki. Co ciekawe, czas przeszły w poprzednim zdaniu nie jest przypadkowy - zaledwie po 2 latach od momentu, kiedy został on "wypuszczony" na testy na publicznych drogach, Waymo zdecydowało się porzucić koncepcję własnego samochodu, i skupiło na umieszczaniu swojego systemu w samochodach wielkich marek motoryzacyjnych, dzięki czemu miał się on stać bardziej powszechny i dostępny dla użytkowników. Pierwszym takim modelem jest Chrysler Pacifica, samochód z napędem hybrydowym, który jest obecnie testowany na publicznych drogach w Kalifornii. W przeciwieństwie do Firefly'a, nie tylko jest to przestronne auto rodzinne, ale też można wyróżnić w nim osobę kierowcy, ponieważ w samochodzcie są zamontowane pedały oraz kierownica - jeśli nikt nie ma ochoty kierować, operuje nimi pojazd. </p>
+
+<img id = "fireflyIMG" src="media/firefly.png" class = "cars" alt="Firefly" height="300" width="500"> <img id = "chryslerIMG" src="media/chrysler.png" class = "cars" alt="Chrysler Pacifica" height="300" width="770">
+<br>
+<i> Po lewej - Waymo Firefly, obecnie wycofany z użytku. Po prawej Chrysler Pacifica z wyposażeniem Waymo, obecny samochód testowy firmy. </i> <br>
+
+<p>Sam system opiera się na zestawie kamer, czujników odległości oraz położenia i prędkości, oraz oczywiście oprogramowaniu, które interpretuje dane i reaguje odpowiednio do nich. Przyjrzyjmy się pokrótce poszczególnym elementom:</p>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="media/slide1lidar.png" alt="LIDAR" style="width:100%">
+    <div class="textTitle">LIDAR </div>
+
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="media/slide2kamera.png" alt="Kamery" style="width:100%">
+    <div class="textTitle">Kamery </div>
+
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="media/slide3radar.png" alt="Radary" style="width:100%">
+    <div class="textTitle">Radary </div>
+
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="media/slide4gps.png" alt="Geolokacja" style="width:100%">
+    <div class="textTitle">Geolokacja </div>
+
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="media/firefly.png" alt="Pozostałe czujniki" style="width:100%">
+    <div class="textTitle">Pozostałe Czujniki</div>
+
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img id="soft" src="media/ai.png" alt="Oprogramowanie">
+    <div class="textTitle"> Oprogramowanie </div>
+
+  </div>
+
+
+
+
+  <a class="prev" onclick="plusSlides(-1)"> &#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+<br>
+<div id="slideshowDescr"> </div>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
+</div>
+
+
+</article>
+
+<iframe id="waymoyt" width="520" height="300" src="https://www.youtube.com/embed/aaOB-ErYq6Y" allowfullscreen></iframe>
+<div>
+<canvas width="520" height="300" id="canv">
+    Przepraszamy, Twoja przeglądarka nie obsługuje canvas.
+</canvas>
+<br><br>
+<i> Po prawej: kolejne etapy, w jakich Waymo "poznaje" świat - najpierw powstaje mapa terenu, później inni uczestnicy ruchu, następnie przeszkody na drodze pokroju pachołków, oraz finalnie oprogramowanie próbuje przewidzieć zachowania innych uczestników ruchu. Źródło: Wystąpienie Chrisa Urmsona na TED 2015. <br> Po lewej: prezentacja obecnego etapu zaawansowania projektu Waymo, źródło: www.youtube.com/Waymo </i>
+</div>
+</div>
+
+<div id="wady">
+<article>
+<br>
+<h4> Chociaż za autonomicznymi samochodami przemawia wiele czynników, to  warto też pomyśleć o wadach takiego rozwiązania, a jest ich więcej, niż mogłoby się początkowo wydawać. Oto kilka spośród nich: </h4> 
+<ul>
+<li> Błędy oprogramowania 
+<p> Zawsze istnieje szansa, że dostarczony program źle zinterpretuje jakąś sytuację, albo nie będzie wiedział jak się zachować. Kierowca może popełnić wiele różnych błędów, ale raczej nie zboczy z drogi, aby uniknąć zderzenia z gazetą, co nie jest takie oczywiste w przypadku samochodu autonomicznego. Wraz z upływem czasu technologia będzie coraz bardziej dopracowana, ale nigdy nie osiągnie się  perfekcji - tak jak i w przypadku tradycyjnego kierowcy. </p> </li>
+<li> Ataki hakerów
+<p>Zabezpieczenia przed wejściem do systemu sterującego samochodem z pewnością będą wyszukane, ale nie da się wykluczyć, że możliwe będzie zdalne wpływanie na ruch pojazdu - zarówno jeśli chodzi o cel podróży, jak i odbicie w przepaść. </p>  </li>
+<li> Prywatność 
+<p> Aby autonomiczny pojazd mógł poprawnie nawigować po drogach, potrzebne jest stałe sprawdzanie jego lokacji. To budzi jednak wątpliwości odnośnie tego, jak owe dane będą wykorzystane - czy jedynie w  celu poprawnego działania autopilota, czy też np. w celach marketingowych. </p></li> 
+<li> Terroryzm 
+<p> Jest to dość ekstremalny przypadek, jednakże możliwym byłoby wykorzystanie samochodów autonomicznych do transportu materiałów wybuchowych i przeprowadzenie ataku terrorystycznego bez ofiar po stronie zamachowców. </p></li> 
+<li> Odpowiedzialność za wypadek 
+<p> Jeśli pojazd jest sterowany przez komputer, i spowoduje wypadek, to kto jest winny? Dostawca oprogramowania? Producent samochodu? Kierowca, nawet w przypadku gdy samochód nie byłby wyposażony w kierownicę i pedały? Ciężko wskazać racjonalną odpowiedź. </p></li>
+<li> Problemy etyczne 
+<p> W przypadku wystąpienia nagłej sytuacji kryzysowej, np. przy wtargnięciu dziecka na drogę, samochód musi podjąć decyzję czy próbować hamować i zrobić krzywdę dziecku, czy też uciec w bok i zrobić krzywdę pasażerom. Decyzja taka mogłaby być podejmowana na podstawie obliczonych szans na przeżycie przy każdej z opcji, jednakże nie wszyscy zgodziliby się z takim podejściem, skoro pasażerowie nie byli winni zaistnienia tej sytuacji drogowej. Zazwyczaj patrząc na sytuację z zewnątrz powiedzielibyśmy, że samochód powinien skręcić, bo systemy bezpieczeństwa, np. poduszki powietrzne, dają większe szanse pasażerom... ale co gdybyśmy byli tymi pasażerami?  </p></li> 
+<li> Utrata miejsc pracy 
+<p> Jednocześnie największa zaleta i wada samochodów autonomicznych to to, że nie potrzebujemy kierowców. Co prawda pozwoli to na ogromne oszczędności dla właścicieli firm transportowych i oszczędność czasu dla przeciętnego Kowalskiego, to dla osób zatrudnionych w transporcie, np. kierowców TIR-ów czy taksówkarzy, a także dla egzaminatorów i instruktorów jazdy, będzie to oznaczało utratę pracy, i znaczny wzrost bezrobocia w kraju. </p></li>
+<li> Sceptycy w stosunku do idei 
+<p> Istnieje też znacza grupa osób, która po prostu lubi prowadzenie samochodu. Istnieją też tacy ludzie, którzy nie akceptują tych technologii, których nie rozumieją. Nakłonienie ich do zakupu samochodu autonomicznego będzie ekstremalnie trudne - a takie pojazdy najwięcej zalet pokazują wtedy, gdy na drodze jest ich wiele, a dokładniej gdy innych samochodów nie ma wcale. </p> <br></li> </ul>
+<b> Ponadto, istnieje jeszcze kilka kwestii, które w przyszłości powinny zostać przezwyciężone, ale obecnie stanowią poważne problemy: </b> <br> <br>
+<ul>
+<li> Koszty 
+<p> Obecnie koszt wyprodukiwania jednego autonomicznego samochodu (wliczając w to wydatki poniesione na opracowanie rozwiązań technologicznych) to ponad 100 000$. Kwota ta zmniejszy się wraz ze wzrostem ilości takich aut na drodze, jednakże początkowo będzie barierą nie do przeskoczenia dla wielu potencjalnych nabywców. </p> </li> 
+<li> Ograniczenia technologiczne
+<p> W ramach obecnie testowanych rozwiązań, niemalże niemożliwa jest jazda przy silnych opadach deszczu czy śniegu - nie bez powodu większość testów odbywa się w słonecznej Kalifornii (chociaż tylko kilka innych stanów w ogóle dopuszcza takie testy). </p> </li> 
+<li> Przepisy 
+<p> Zanim samochody autonomiczne zostaną dopuszczone do publicznego użytku, będą konieczne szeroko zakrojone zmiany w prawie, dotyczące zarówno przepisów ruchu drogowego, jak i np. ubezpieczeń. </p></li> 
+
+</ul>
+</article>
+
+
+
+
+</div>
+</div>
+<script src="projekt.js"> </script>
+
+
+
+</body>
+</html> 

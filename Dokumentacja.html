@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset = 'utf-8'>
+<title> Dokumentacja </title>
+
+</head>
+<body>
+<h3>
+Dokumentacja <br>
+Samochody Autonomiczne – projekt nr 1, Techniki Internetowe, 2017  </h3>
+<h5>Tomasz Kleiner, III rok, IS, WFiIS, grupa 2 (środa 12:10) </h5>
+
+
+<h4>Ogólny opis i tematyka: </h4>
+<p>Strona zrealizowana w ramach projektu ma przybliżyć użytkownikowi tematykę jednej z najbardziej obiecujących i rozwijających się technologii w zakresie informatyki stosowanej - samochodów autonomicznych, w oparciu o firmę Waymo, obecnego lidera tej branży. W ramach strony przedstawiono zarówno krótki opis zagadnienia, wady i zalety zastąpienia tradycyjnych pojazdów przez te sterowane przez komputer, jak i przybliżenie samej technologii zastosowanej w samochodach firmy – zarówno pod kątem sprzętu, jak i oprogramowania. Strona jest zrealizowana w stylu artykułu popularno – naukowego, dlatego duży nacisk został położony na stronę wizualną – animacje, pokazy slajdów czy półprzezroczyste, tematyczne tła. <p>
+
+<h4>Nawigacja po stronie: </h4>
+<p>Strona podzielona jest na 3 zakładki, po których można poruszać się za pomocą kliknięcia na odpowiedni przycisk na pasku na górze strony, odpowiadający danej tematyce. Wyborowi towarzyszą dźwięk oraz zaznaczenie kolorem odpowiedniego klawisza (zakładki). Po wczytaniu strony znajdujemy się na zakładce zatytułowanej „Start”, gdzie dowiadujemy się podstawowych informacji o genezie idei samochodów autonomicznych oraz o ich zaletach, a także możemy obejrzeć animację (ładuje się ona automatycznie po wczytaniu zakładki „Start”), która pokazuje, w jaki sposób autonomiczny samochód może nie tylko odczytać, że powinien zahamować, ale też w jak bliskich odstępach mogą się takie pojazdy poruszać, i jak błyskawicznie reagują one na zmianę warunków ruchu. 
+Poprzez kliknięcie na zakładkę „Google Waymo” przenosimy się na stronę poświęconą projektowi konsorcjum Alphabet, gdzie możemy przeczytać trochę informacji o postępach projektu, zobaczyć używane w jego ramach pojazdy, na pokazie slajdów zobaczyć, w jakie urządzenia wyposażone są takie samochody i jak ich używają, obejrzeć film przygotowany przez Waymo i dostępny na kanale Youtube firmy, oraz zobaczyć kolejną animację, również uruchamianą automatycznie po wczytaniu zakładki – tym razem odnośnie tego, w jaki sposób autonomiczny pojazd poznaje w poszczególnych krokach sytuację na drodze, dzięki czemu może odpowiednio sterować samochodem. 
+Z kolei w zakładce „Wady” możemy zapoznać się z negatywnymi aspektami rozważanej technologii, która może okazać się równie niebezpieczna, jak fascynująca. Wyszczególnione są zarówno problemy napotykane na obecnym etapie jej rozwoju, jak i bardziej filozoficzne i niezwiązane z ograniczeniami sprzętowymi kwestie. </p>
+
+<h4>Sposób realizacji: </h4>
+<p>Strona została zrealizowana przy pomocy HTML5 z CSS 3.0 i skryptami w języku JavaScript. Za przełączanie zakładek odpowiadają metody openStart(), openGoogle() i openwady(), które korzystają z metody getElementById(), operują na parametrach stylów (display oraz backgroundColor), oraz wywołują funkcję play(), która odpowiada za odtwarzanie dźwięku. Za animację widoczną na stronie startowej odpowiada element canvas, a obsługuje go funkcja drawCarsCanv(). Również na elemencie canvas pracuje metoda draw(), odpowiedzialna za animację w zakładce „Google Waymo”, prezentująca wizualizację świata przez oprogramowanie sterujące samochodem autonomicznym firmy Waymo. Ponadto widzimy w tej zakładce element iframe, w którym wyświetlany jest film z serwisu Youtube (mogący pracować też w trybie pełnoekranowym), a także pokaz slajdów, zrealizowany za pomocą zmian widoczności poszczególnych obrazów (display) oraz innerHTML, który odpowiada za dodawanie opisów do poszczególnych slajdów. </p>
+
+<h4>Źródła: </h4>
+<ul>
+<li> <a href="https://waymo.com/"> Waymo.com </a> </li>
+<li> <a href="https://www.ted.com/talks/chris_urmson_how_a_driverless_car_sees_the_road"> Wystąpienie Chrisa Urmsona na TED 2015 </a> </li>
+<li> <a href="https://www.shellypalmer.com/2017/04/can-self-driving-cars-ever-really-safe/"> Shellypalmer.com </a> </li>
+<li> <a href="https://www.makeuseof.com/tag/how-self-driving-cars-work-the-nuts-and-bolts-behind-googles-autonomous-car-program/"> Makeuseof.com </a> </li>
+<li> <a href="https://www.national.co.uk/tech-powers-google-car/"> Natonial.co.uk </a></li>
+<li> <a href="https://www.w3schools.com/html/default.asp"> W3Schools.com/html </a></li>
+<li> <a href="https://www.w3schools.com/css/default.asp"> W3Schools.com/css </a></li>
+<li> <a href="https://www.w3schools.com/js/default.asp"> W3Schools.com/js </a></li>
+<li> <a href="https://cdn.cultofmac.com/wp-content/uploads/2017/06/cranium-2099120-780x861.png"> Obrazek - AI </a></li>
+<li> <a href="http://www.freepngimg.com/download/traffic_light/5-2-traffic-light-png-image.png"> Obrazek - sygnalizacja świetlna </a></li>
+<li> <a href="https://i1.wp.com/interactive-content.is.ed.ac.uk/wp-content/uploads/2015/06/edinburgh_ground_normal.png"> Obrazek - droga </a></li>
+<li> <a href="https://youtube.com/Waymo"> Kanał Waymo w serwisie Youtube.com </a></li>
+</ul>
+</body>
+</html>
